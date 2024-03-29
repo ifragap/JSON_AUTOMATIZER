@@ -31,7 +31,6 @@ def document(numDatos = 1, file = "doc.json", ovw = True):
                 num = int(input("\nNúmero de parámetros que va a tener este objeto: "))
                 document(num, file, False)
                 print("\nHemos terminado de crear de objeto.")
-                #objeto(file)
             case "S":
                 string(file)
         
