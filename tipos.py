@@ -1,29 +1,25 @@
 # Función para escribir un parámetro String
-def string(file):
+def string():
     nom = str(input("\nNombre del parámetro: "))
     val = str(input("\nSu valor: "))
     
     par = "\"" + nom + "\"" + ": " + "\"" + val + "\""
 
-    f = open(file, "a")
-    f.write(par)
-    f.close
+    return par
 
 
 # Función para escribir un parámetro Number
-def number(file):
+def number():
     nom = str(input("\nNombre del parámetro: "))
     val = str(input("\nSu valor: "))
     
     par = "\"" + nom + "\"" + ": " + val
 
-    f = open(file, "a")
-    f.write(par)
-    f.close
+    return par
 
 
 # Función para escribir un parámetro Boolean
-def booleano(file):
+def booleano():
     nom = str(input("\nNombre del parámetro: "))
     val = str(input("\nSu valor, True (T) o False (F): "))
     if(val[0].upper() == "T"):
@@ -33,13 +29,11 @@ def booleano(file):
     
     par = "\"" + nom + "\"" + ": " + val
 
-    f = open(file, "a")
-    f.write(par)
-    f.close
+    return par
 
 
 # Función para escribir un parámetro Array
-def array(file, tipo):
+def array(tipo):
     nom = str(input("\nNombre del parámetro: "))
     par = "\"" + nom + "\"" + ": ["
 
@@ -51,7 +45,7 @@ def array(file, tipo):
             match tipo:
                 case "A":
                     t = str(input("\n¿Tipo de dato dentro de array?\nElija entre Array (A), Boolean (B), Number (N), Object (O) o String (S).\n"))
-                    array(file, t[0].upper())
+                    array(t[0].upper())
                 case "B":
                     if(val[0].upper() == "T"):
                         val = "true"
@@ -69,6 +63,4 @@ def array(file, tipo):
                 more = False
     par = par + "]"
     
-    f = open(file, "a")
-    f.write(par)
-    f.close
+    return par
