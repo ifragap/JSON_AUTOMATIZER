@@ -55,12 +55,13 @@ def array(tipo):
                     return
                 case "S":
                     val = "\"" + val + "\""
+            
             comp = str(input("\n¿Quiere añadir algún valor más? (S/N)\n"))
             if(comp[0].upper() == "S"):
                 par = par + val + ","
             elif(comp[0].upper() == "N"):
                 par = par + val
                 more = False
-    par = par + "]"
     
+    par = par + "]"
     return par

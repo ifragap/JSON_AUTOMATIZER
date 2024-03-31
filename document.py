@@ -1,8 +1,6 @@
 import os
 from tipos import booleano, number, string, array
 
-
-
 def document(numDatos = 1):
     par = "{"
     for i in range(numDatos): 
@@ -32,5 +30,3 @@ def document(numDatos = 1):
         
     par += "}"
     return par
-    
-print(document(2))
